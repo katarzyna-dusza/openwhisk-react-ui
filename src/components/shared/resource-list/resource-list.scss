@@ -1,0 +1,136 @@
+.resource {
+  .resource__content {
+    position: relative;
+
+    .header-list {
+      margin: 0;
+      border: none;
+
+      &__column-name {
+        padding: 0.75rem;
+        color: $resource-elem;
+        font-size: 1.05rem;
+        font-weight: 400;
+        border-bottom: 1px solid rgba($light, 0.1);
+      }
+
+      div:last-child {
+        text-align: right;
+      }
+    }
+
+    .entry-list {
+      margin: 0;
+      padding: 10px 15px;
+      color: $white;
+
+      a {
+        color: $white;
+        text-decoration: none !important;
+        display: block;
+      }
+
+      div:first-child {
+        cursor: pointer;
+      }
+
+      &:hover {
+        box-shadow: 0 0 18px -4px rgba($dark, 0.75);
+        background-color: rgba($light, 0.2) !important;
+      }
+
+      .material-icons {
+        margin-right: 15px;
+        cursor: pointer;
+      }
+
+      div:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .resource__title {
+    .create-btn {
+      margin-top: 40px;
+      padding: 0 30px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $green;
+      cursor: pointer;
+      font-size: 0.75em;
+      font-weight: 400;
+
+      &:before {
+        content: '+ '
+      }
+    }
+  }
+
+  .empty-page {
+    margin-top: 50px;
+
+    .info {
+      padding: 40px 20px 20px;
+      font-weight: 100;
+      font-size: 1.3em;
+      color: $light-grey;
+      text-align: center;
+    }
+
+    .create-resource {
+      width: fit-content;
+      margin: auto;
+      padding: 5px 15px;
+      text-align: center;
+      font-variant: small-caps;
+      border: 1px solid $green;
+
+      a {
+        color: $green !important;
+      }
+    }
+
+    .image {
+      height: 100%;
+      text-align: center;
+
+      img {
+        height: 300px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+.pagination {
+  width: fit-content;
+  margin: auto;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  font-size: 18px;
+
+  &--show {
+    display: block;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  li {
+    margin: 0 5px;
+
+    &.active > a {
+      font-weight: bold;
+    }
+
+    a {
+      color: $resource-elem;
+    }
+  }
+}
+

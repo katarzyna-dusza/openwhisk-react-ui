@@ -1,0 +1,60 @@
+.tile-wrapper {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+
+  .tile {
+    height: 200px;
+    margin: 15px auto;
+    display: block;
+    border: 3px solid $white;
+    transition: all linear 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &--red {
+      border-color: $red;
+      background-color: $red;
+    }
+
+    &--grey {
+      border-color: $grey;
+      background-color: $grey;
+    }
+
+    &--green {
+      border-color: $green;
+      background-color: $green;
+    }
+
+    &__content {
+      width: 200px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      color: white !important;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      .icon {
+        font-size: 60px;
+      }
+
+      .title {
+        color: $dark;
+        font-weight: 400;
+      }
+
+      .description {
+        padding: 5px 0;
+        font-size: 12px;
+      }
+    }
+  }
+}

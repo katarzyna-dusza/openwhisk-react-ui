@@ -1,0 +1,42 @@
+.resource {
+  height: 100vh;
+  padding: 50px 150px;
+  background-color: $dark;
+
+  &--with-nav {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+    padding: 0;
+    position: absolute;
+    font-family: 'Lato', sans-serif;
+  }
+
+  &__title {
+    height: 60px;
+    margin: 40px 0 0 40px;
+    line-height: 60px;
+    background-color: $resource-elem;
+    color: $light-grey;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 300;
+  }
+
+  &__content {
+    height: calc(100vh - 140px);
+    margin-left: 40px;
+    background-color: rgba($light, 0.1);
+    overflow: scroll;
+
+    .info {
+      padding: 40px 20px 20px;
+      font-style: italic;
+      font-weight: 100;
+      color: $light-grey;
+
+      &::before {
+        content: '> ';
+      }
+    }
+  }
+}

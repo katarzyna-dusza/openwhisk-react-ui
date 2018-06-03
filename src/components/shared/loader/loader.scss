@@ -1,0 +1,49 @@
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  height: 50%;
+  width: 60px;
+  margin: auto;
+  transform: translateY(50%);
+
+  .square {
+    animation-name: rotating;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    &--first {
+      height: 60px;
+      width: 60px;
+      position: relative;
+      border: 1px solid  #f2847f;
+      animation-duration: 4s;
+    }
+
+    &--second {
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      border: 1px solid #9ab899;
+      animation-duration: 3s;
+    }
+
+    &--third {
+      height: 10px;
+      width: 10px;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      border: 1px solid #8e8e8e;
+      animation-duration: 2s;
+    }
+  }
+}

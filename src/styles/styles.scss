@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap-grid';
+
+@import 'theme.scss';
+@import 'resource-container.scss';
+
+@import '../components/navigation/navigation.scss';
+@import '../components/tiles/tiles.scss';
+
+@import '../components/shared/resource-list/resource-list.scss';
+@import '../components/shared/resource-create-update/resource-create-update.scss';
+@import '../components/shared/loader/loader.scss';
+
+body {
+  font-family: $font-code;
+  font-weight: 300;
+}

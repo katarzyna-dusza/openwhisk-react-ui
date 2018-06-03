@@ -1,0 +1,64 @@
+.top-nav {
+  height: 100vh;
+  width: 300px;
+  position: absolute;
+  background-color: $dark;
+  font-family: $font-code;
+  overflow: scroll;
+
+  &__section {
+    margin: 0 0 40px;
+    color: $red;
+
+    .header {
+      height: 60px;
+      margin: 40px 0 0;
+      padding: 5px 15px;
+      background-color: $resource-elem;
+      line-height: 55px;
+      font-size: 0.8em;
+      color: #ffffff;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+
+    .section {
+      font-family: $font-code;
+
+      &__elem {
+        padding: 15px 20px;
+        display: block;
+        color: $white;
+        font-weight: 300;
+        text-decoration: none;
+
+        &--active {
+          color: $resource-elem;
+
+          .icon {
+            color: $resource-elem !important;
+          }
+        }
+
+        .icon {
+          width: 25px;
+          padding: 0;
+          line-height: 25px;
+          font-size: 1rem;
+          margin-right: 10px;
+          color: $white;
+          text-align: right;
+          float: left;
+        }
+
+        &:hover {
+          background-color: rgba($black, 0.1) !important;
+
+          .icon {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}
