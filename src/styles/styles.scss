@@ -16,3 +16,8 @@ body {
   font-family: $font-code;
   font-weight: 300;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

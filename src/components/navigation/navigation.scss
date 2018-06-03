@@ -4,7 +4,8 @@
   position: absolute;
   background-color: $dark;
   font-family: $font-code;
-  overflow: scroll;
+  overflow: auto;
+  overflow-x: hidden;
 
   &__section {
     margin: 0 0 40px;

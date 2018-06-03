@@ -32,7 +32,7 @@ You have 2 options here:
 - Deploy a custom OpenWhisk in your cloud infrastructure
 - Use a hosted version of OpenWhisk on BlueMix:
   - create an account on [BlueMix OpenWhisk](https://console.bluemix.net/registration/?target=%2Fopenwhisk),
-  - install and enable in Chrome Browser [Allow-Control-Allow-Origin: * add-on](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) - without it, you will be able to ONLY displaying all resources.
+  - install and enable `Allow-Control-Allow-Origin: *` [add-on in Chrome Browser](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)
 
 > Remember about disabling the CORS add-on after you're finished playing around.
 
