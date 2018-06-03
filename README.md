@@ -30,29 +30,35 @@ For testing:
 
 You have 2 options here:
 - Deploy a custom OpenWhisk in your cloud infrastructure
-- Use a hosted version of OpenWhisk on BlueMix:
-  - create an account on [BlueMix OpenWhisk](https://console.bluemix.net/registration/?target=%2Fopenwhisk),
+- Use a hosted version of OpenWhisk on Bluemix:
+  - create an account on [Bluemix OpenWhisk](https://console.bluemix.net/registration/?target=%2Fopenwhisk),
+  - download, install and configure [Bluemix CLI](https://console.bluemix.net/openwhisk/learn/cli)
   - install and enable `Allow-Control-Allow-Origin: *` [add-on in Chrome Browser](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)
 
 > Remember about disabling the CORS add-on after you're finished playing around.
 
 ## Run app
+1. After `Bluemix CLI` will be installed, run 
+    ```shell
+    bx wsk property get
+    ```
+1. Copy `whisk API host`, `whisk API version`, `whisk auth` and paste into `config.js` file :
+    ```javascript
+    export const config = {
+        baseUrl: 'https://<whisk API host>/api/<whisk API version>/namespaces/<your email>_dev',
+        namespace: '<your email>_dev',
+        token: 'Basic <whisk auth>'
+    };
+    
+    ```
+
 1. Install all dependencies
     ```shell
     yarn install
     ```
 
-1. Paste the link, namespace and token from your OpenWhisk account into `config.js` file :
-    ```javascript
-    export const config = {
-        baseUrl: 'URL_TO_OPENWHISK',
-        namespace: 'YOUR_NAMESPACE_dev',
-        token: 'Basic YOUR_TOKEN'
-    };
-    
-    ```
 
-1. Run
+4. Run
     ```shell
     npm start
     ```
