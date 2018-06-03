@@ -1,18 +1,15 @@
 # UI for Apache OpenWhisk
 
-## Overview
 This repo is an experiment with the main purpose of learning React & Redux.
 Because I played around with Apache OpenWhisk earlier, I decided to create a UI for this FaaS platform.
 
 With this UI, you will be able to create actions, triggers and rules. 
-> Remember about disabling the CORS add-on after you're finished playing around.
-
 This UI can be useful when working with custom cloud deployments of OpenWhisk.
 
 ## Technologies
 - **React**
 - **Redux**
-- **webpack**
+- **Webpack**
 
 Other libraries:
 - axios
@@ -33,9 +30,11 @@ For testing:
 
 You have 2 options here:
 - Deploy a custom OpenWhisk in your cloud infrastructure
-- Use a hosted verion of OpenWhisk on BlueMix:
-  - create account on [BlueMix OpenWhisk](https://console.bluemix.net/registration/?target=%2Fopenwhisk),
-  - install and enable in Chrome Browser [CORS add-on](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) - without it, you will be able to ONLY displaying all resources.
+- Use a hosted version of OpenWhisk on BlueMix:
+  - create an account on [BlueMix OpenWhisk](https://console.bluemix.net/registration/?target=%2Fopenwhisk),
+  - install and enable in Chrome Browser [Allow-Control-Allow-Origin: * add-on](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi) - without it, you will be able to ONLY displaying all resources.
+
+> Remember about disabling the CORS add-on after you're finished playing around.
 
 ## Run app
 1. Install all dependencies
