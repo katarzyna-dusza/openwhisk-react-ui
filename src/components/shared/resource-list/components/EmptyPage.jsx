@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const EmptyPage = ({ title, resource }) => {
     const info = `Sorry, it looks like you have an empty list of ${resource}s.`;
     const create = `+ Create New ${resource}`;
+    const link = `/${resource.toLowerCase()}-create`;
 
     return (
         <div className='resource resource--with-nav col-12'>
@@ -13,8 +14,8 @@ const EmptyPage = ({ title, resource }) => {
                     <img src='src/images/empty-box.svg' alt='empty'></img>
                 </div>
                 <div className='info'>{info}</div>
-                <div className='create-resource'>
-                    <Link to='/action-create'>{create}</Link>
+                <div className={'Activation' !== resource ? 'create-resource' : 'create-resource create-resource--hidden'}>
+                    <Link to={link}>{create}</Link>
                 </div>
             </div>
         </div>

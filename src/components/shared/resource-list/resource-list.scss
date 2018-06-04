@@ -90,6 +90,10 @@
       a {
         color: $green !important;
       }
+
+      &--hidden {
+        display: none;
+      }
     }
 
     .image {
