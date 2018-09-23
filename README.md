@@ -38,16 +38,20 @@ You have 2 options here:
 > Remember about disabling the CORS add-on after you're finished playing around.
 
 ## Run app
-1. After `Bluemix CLI` will be installed, run 
+1. After `Bluemix CLI` is installed, run 
     ```shell
     bx wsk property get
     ```
-1. Copy `whisk API host`, `whisk API version`, `whisk auth` and paste into `config.js` file :
+1. Encode `whisk auth` token, consisting of username and password (username:password):
+    ```shell
+    echo -n username:password | base64 
+    ```
+1. Copy `whisk API host`, `whisk API version`, returned `token` from command above and paste into `config.js` file:
     ```javascript
     export const config = {
         baseUrl: 'https://<whisk API host>/api/<whisk API version>/namespaces/<your email>_dev',
         namespace: '<your email>_dev',
-        token: 'Basic <whisk auth>'
+        token: 'Basic <token>'
     };
     
     ```
