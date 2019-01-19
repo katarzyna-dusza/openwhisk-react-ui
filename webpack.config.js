@@ -35,7 +35,7 @@ module.exports = {
         mainFields: ["browser", "module", "main"]
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
